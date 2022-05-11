@@ -4,7 +4,6 @@ package com.example.lunchtray.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -25,16 +24,11 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final FragmentContainerView navHostFragment;
 
-  @NonNull
-  public final Button startOrderBtn;
-
   private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout container, @NonNull FragmentContainerView navHostFragment,
-      @NonNull Button startOrderBtn) {
+      @NonNull ConstraintLayout container, @NonNull FragmentContainerView navHostFragment) {
     this.rootView = rootView;
     this.container = container;
     this.navHostFragment = navHostFragment;
-    this.startOrderBtn = startOrderBtn;
   }
 
   @Override
@@ -72,14 +66,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.start_order_btn;
-      Button startOrderBtn = rootView.findViewById(id);
-      if (startOrderBtn == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((ConstraintLayout) rootView, container, navHostFragment,
-          startOrderBtn);
+      return new ActivityMainBinding((ConstraintLayout) rootView, container, navHostFragment);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
