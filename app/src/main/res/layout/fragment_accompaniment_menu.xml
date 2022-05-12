@@ -26,6 +26,7 @@
             name="viewModel"
             type="com.example.lunchtray.model.OrderViewModel" />
 
+
         <variable
             name="accompanimentFragment"
             type="com.example.lunchtray.ui.order.AccompanimentMenuFragment" />
