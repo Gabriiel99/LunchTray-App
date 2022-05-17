@@ -133,6 +133,14 @@ class OrderViewModel : ViewModel() {
      * Reset all values pertaining to the order.
      */
     fun resetOrder() {
-        // TODO: Reset all values associated with an order
+        previousEntreePrice = 0.0
+        previousSidePrice = 0.0
+        previousAccompanimentPrice = 0.0
+        _entree.value = null
+        _side.value = null
+        _accompaniment.value = null
+        _subtotal.value = 0.0
+        _total.value = 0.0
+        _tax.value = 0.0
     }
 }
