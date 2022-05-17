@@ -83,13 +83,14 @@ class OrderViewModel : ViewModel() {
      * Set the side for the order.
      */
     fun setSide(side: String) {
-        // TODO: if _side.value is not null, set the previous side price to the current side price.
+        previousSidePrice = _side.value?.price ?: 0.0
 
-        // TODO: if _subtotal.value is not null subtract the previous side price from the current
-        //  subtotal value. This ensures that we only charge for the currently selected side.
+        _subtotal.value = (_subtotal.value ?: 0.0) - previousSidePrice
 
-        // TODO: set the current side value to the menu item corresponding to the passed in string
-        // TODO: update the subtotal to reflect the price of the selected side.
+        _side.value = menuItems[side]
+
+        updateSubtotal(menuItems[side]?.price ?: 0.0)
+
     }
 
     /**
