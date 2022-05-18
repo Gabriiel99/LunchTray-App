@@ -123,13 +123,13 @@
                 app:layout_constraintTop_toBottomOf="@id/subtotal"
                 tools:text="Tax: $0.73"/>
 
-            <!-- TODO: set the text to the current total value from the view model -->
             <TextView
                 android:id="@+id/total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="true"
                 android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="@{@string/total(viewModel.total)}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tax"
                 tools:text="Total: $10.73"/>
