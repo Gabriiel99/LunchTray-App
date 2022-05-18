@@ -65,6 +65,8 @@ class CheckoutFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
 
             checkoutFragment = this@CheckoutFragment
+
+            viewModel = sharedViewModel
         }
     }
 
